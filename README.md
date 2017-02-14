@@ -54,4 +54,4 @@ undoEdit.setUndoListener(new UndoEditText.UndoListener() {
 ```
 - 演示图
 
-![image](http://note.youdao.com/favicon.ico)
+![image](https://github.com/NUST-Bob/UndoEditText/blob/master/image/UndoEditText.gif)
