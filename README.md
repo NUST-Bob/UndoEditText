@@ -1,5 +1,10 @@
 # UndoEditText
 一个内容可撤销的EditText控件，并且在横竖屏切换时可以保存、恢复记录。
+#### 重复造这轮子的原因
+网上相同的轮子已经有很多了，但是作为自定义view，他们对view的实现大都
+不完整。这些控件在遇到横竖屏类似情形的时候，不能够保存他们应有的状态
+，也就是没有实现自定义控件自动保存状态和恢复状态的机制。相关的状态自
+动保存机制，请参考博客：http://www.codeceo.com/article/android-save-view-state.html
 #### UndoEditText的使用
 - 添加undolib库，并在需要使用的工程的build.gradle的dependencies中加入依赖
 ```
@@ -31,7 +36,10 @@ UndoEditText undoEdit = (UndoEditText) findViewById(R.id.uet);
 ```
 undoEdit.undo();    //撤销修改
 undoEdit.redo();    //恢复撤销
-undoEdit.setMaxHistory(200);  //设置最多可以撤销的步骤，默认为Integer.MAX_VALUE
+//设置最多可以撤销的步骤，默认为Integer.MAX_VALUE
+undoEdit.setMaxHistory(200);
+undoEdit.canUndo(); //控件是否还可以撤销
+undoEdit.canRedo(); //控件是否还可以恢复（反撤销）
 ```
 - 撤销状态的回调接口
 
