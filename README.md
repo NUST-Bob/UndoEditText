@@ -63,3 +63,7 @@ undoEdit.setUndoListener(new UndoEditText.UndoListener() {
 - 演示图
 
 ![image](https://github.com/NUST-Bob/UndoEditText/blob/master/image/UndoEditText.gif)
+
+- 最后
+
+如果有用，给个star吧 6^6
